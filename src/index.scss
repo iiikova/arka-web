@@ -56,3 +56,34 @@ header {
     }
   }
 }
+
+// PRODUCTS
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  div {
+    width: 400px;
+    height: 100%;
+  }
+}
+
+// DESIGN
+
+// Merchants
+.merchants {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 294px;
+  }
+}
+
+// FOOTER
+footer {
+  background: #f2f3f4;
+}
