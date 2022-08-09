@@ -1,9 +1,12 @@
 import React from "react";
+import { BsFacebook } from "react-icons/bs";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { RiInstagramFill } from "react-icons/ri";
 
 function Footer() {
   return (
     <footer>
-      <div className=" container ">
+      <div className=" container col">
         <div>
           <img src={require("../assets/images/logo.png")} />
         </div>
@@ -38,18 +41,32 @@ function Footer() {
             <li>14 Day Free Shopify Trial</li>
             <li>BigCommerce</li>
             <li>
-              <div>
-                <span>f</span>
-                <span>t</span>
-                <span>i</span>
+              <div className="social">
+                <span>
+                  <BsFacebook />
+                </span>
+                <span>
+                  <AiFillTwitterCircle />
+                </span>
+                <span>
+                  <RiInstagramFill />
+                </span>
               </div>
             </li>
           </ul>
         </div>
         <div>
-          <p>Get exclusive offers and tips.</p>
-          <input type="text" placeholder="Your email" />
-          <button>Join instantly</button>
+          <ul>
+            <li>
+              <p>Get exclusive offers and tips.</p>
+            </li>
+            <li>
+              <input type="text" placeholder="Your email" />
+            </li>
+            <li>
+              <button>Join instantly</button>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

@@ -3,14 +3,17 @@ import React from "react";
 function Main() {
   return (
     <>
-      <section className="main">
+      <section className="main " id="main">
         <div className="container">
-          <h1>Fast and easy custom boxes your customers will love</h1>
-          <p>
-            Fastest turnaround. Best prices instantly. Dieline design help
-            available.
-          </p>
-          <button>Start your design</button>
+          <div className="main__title">
+            <h1>Fast and easy custom boxes your customers will love</h1>
+            <p>
+              Fastest turnaround. Best prices instantly.
+              <br />
+              Dieline design help available.
+            </p>
+            <button>Start your design</button>
+          </div>
         </div>
       </section>
       <div className="brands ">

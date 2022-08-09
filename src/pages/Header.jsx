@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+
+// rr6
+import { NavLink } from "react-router-dom";
+
+// icons
+import { BsStars } from "react-icons/bs";
+import { GrCart } from "react-icons/gr";
 
 function Header() {
+  const [isActive, setIsActive] = useState(false);
   return (
-    <header className="header">
+    <header>
       <div>
         <img src={require("../assets/images/logo.png")} alt="logo" />
       </div>
@@ -10,16 +18,24 @@ function Header() {
         <nav>
           <ul>
             <li>
-              <a href="#">Start your design</a>
+              <a data-toggle="tab" role="tab" href="#main">
+                Start your design
+              </a>
             </li>
             <li>
-              <a href="#">All products</a>
+              <a data-toggle="tab" role="tab" href="#products">
+                All products
+              </a>
             </li>
             <li>
-              <a href="#">Inspiration</a>
+              <a data-toggle="tab" role="tab" href="#design">
+                Inspiration
+              </a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a data-toggle="tab" role="tab" href="#merchants">
+                About
+              </a>
             </li>
           </ul>
         </nav>
@@ -31,7 +47,9 @@ function Header() {
               <a href="#">Account</a>
             </li>
             <li>
-              <a href="#">B</a>
+              <a href="#">
+                <GrCart />
+              </a>
             </li>
           </ul>
         </nav>
