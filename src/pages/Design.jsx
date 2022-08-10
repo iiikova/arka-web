@@ -3,11 +3,11 @@ import React from "react";
 function Design() {
   return (
     <div className="container" id="design">
-      <div className="design">
-        <div className="design__green">
+      <section>
+        <div className="green-box">
           <h2>Fast and easy custom boxes your customers will love</h2>
-          <div className="design__green__frames">
-            <div className="design__green__frames__item">
+          <div className="green-items">
+            <div>
               <img
                 src={require("../assets/images/frames/Rectangle.png")}
                 alt="frame"
@@ -19,7 +19,7 @@ function Design() {
                 few clicks.
               </p>
             </div>
-            <div className="design__green__frames__item">
+            <div>
               <img
                 src={require("../assets/images/frames/Rectangle (1).png")}
                 alt="frame"
@@ -31,7 +31,7 @@ function Design() {
                 before production.
               </p>
             </div>
-            <div className="design__green__frames__item">
+            <div>
               <img
                 src={require("../assets/images/frames/Rectangle (2).png")}
                 alt="frame"
@@ -49,19 +49,21 @@ function Design() {
           </div>
         </div>
 
-        <div className="design__transparent">
+        <div className="trans-box">
           <h2>The Arka advantage</h2>
-          <div className="design__transparent__items">
-            <div className="design__transparent__items__item">
+          <div className="trans-items">
+            <div>
               <img src={require("../assets/images/frames/1.png")} alt="frame" />
               <h3>Eco-Friendly Material</h3>
               <p>
                 Order as little as 10, giving you the
                 <br />
-                lowest minimums in the industry at the best prices.
+                lowest minimums in the industry at
+                <br />
+                the best prices.
               </p>
             </div>
-            <div className="design__transparent__items__item">
+            <div>
               <img src={require("../assets/images/frames/2.png")} alt="frame" />
               <h3>Full Outside Print</h3>
               <p>
@@ -72,7 +74,7 @@ function Design() {
                 print, change design whenever!
               </p>
             </div>
-            <div className="design__transparent__items__item">
+            <div>
               <img src={require("../assets/images/frames/3.png")} alt="frame" />
               <h3>Proofing</h3>
               <p>
@@ -86,8 +88,8 @@ function Design() {
           </div>
         </div>
 
-        <div className="design__yellow">
-          <div className="design__yellow__item">
+        <div className="yellow-box">
+          <div>
             <img src={require("../assets/images/frames/11.png")} alt="frame" />
             <h3>Couldn't find a size you need?</h3>
             <p>
@@ -96,7 +98,7 @@ function Design() {
             </p>
             <button>Request a quote</button>
           </div>
-          <div className="design__yellow__item">
+          <div>
             <img src={require("../assets/images/frames/22.png")} alt="frame" />
             <h3>Couldn't find a size you need?</h3>
             <p>
@@ -106,7 +108,7 @@ function Design() {
             <button>Request a quote</button>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

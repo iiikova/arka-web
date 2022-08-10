@@ -3,9 +3,9 @@ import React from "react";
 function Main() {
   return (
     <>
-      <section className="main " id="main">
+      <section className="main" id="main">
         <div className="container">
-          <div className="main__title">
+          <div>
             <h1>Fast and easy custom boxes your customers will love</h1>
             <p>
               Fastest turnaround. Best prices instantly.
@@ -16,7 +16,7 @@ function Main() {
           </div>
         </div>
       </section>
-      <div className="brands ">
+      <div className="brands">
         <div className="container">
           <div>
             <img src={require("../assets/images/shopify.png")} alt="Shopify" />

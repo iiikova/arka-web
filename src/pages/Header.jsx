@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 // icons
-import { BsStars } from "react-icons/bs";
 import { GrCart } from "react-icons/gr";
 
 function Header() {

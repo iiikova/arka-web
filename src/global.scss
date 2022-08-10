@@ -1,0 +1,51 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexSpaceBetween {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+$ff-primary: Roboto;
+
+@mixin h1 {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  font-style: normal;
+}
+@mixin h2 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  font-style: normal;
+}
+@mixin h3 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-style: normal;
+}
+
+@mixin p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+@mixin button {
+  border-radius: 44px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 15px 20px;
+  letter-spacing: 1.96px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #3d5675;
+  color: #ffffff;
+}

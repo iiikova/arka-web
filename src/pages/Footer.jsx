@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { BsFacebook } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
@@ -10,6 +11,7 @@ function Footer() {
         <div>
           <img src={require("../assets/images/logo.png")} />
         </div>
+
         <div>
           <nav>
             <ul>
@@ -23,6 +25,7 @@ function Footer() {
             </ul>
           </nav>
         </div>
+
         <div>
           <nav>
             <ul>
@@ -35,6 +38,7 @@ function Footer() {
             </ul>
           </nav>
         </div>
+
         <div>
           <ul>
             <li>Shopify App</li>
@@ -55,6 +59,7 @@ function Footer() {
             </li>
           </ul>
         </div>
+
         <div>
           <ul>
             <li>

@@ -9,10 +9,12 @@ function Products() {
       </div>
       <section>
         <div className="item">
-          <img
-            src={require("../assets/images/products/Rectangle.png")}
-            alt="products"
-          />
+          <div>
+            <img
+              src={require("../assets/images/products/Rectangle.png")}
+              alt="products"
+            />
+          </div>
 
           <div className="desc">
             <div className="desc__title">
