@@ -1,59 +1,117 @@
 import React, { useState } from "react";
 
-// rr6
-import { NavLink } from "react-router-dom";
-
 // icons
 import { GrCart } from "react-icons/gr";
+import { AiOutlineMenu } from "react-icons/ai";
+import { BsFacebook } from "react-icons/bs";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { RiInstagramFill } from "react-icons/ri";
 
 function Header() {
-  const [isActive, setIsActive] = useState(false);
+  const [isMenu, setIsMenu] = useState(false);
+
+  const showMenu = () => {
+    setIsMenu((previous) => !previous);
+  };
+
   return (
-    <header>
-      <div>
-        <img src={require("../assets/images/logo.png")} alt="logo" />
-      </div>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <a data-toggle="tab" role="tab" href="#main">
-                Start your design
-              </a>
-            </li>
-            <li>
-              <a data-toggle="tab" role="tab" href="#products">
-                All products
-              </a>
-            </li>
-            <li>
-              <a data-toggle="tab" role="tab" href="#design">
-                Inspiration
-              </a>
-            </li>
-            <li>
-              <a data-toggle="tab" role="tab" href="#merchants">
-                About
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Account</a>
-            </li>
-            <li>
-              <a href="#">
-                <GrCart />
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <>
+      {isMenu ? (
+        <div className="menu_block">
+          <div>
+            <img src={require("../assets/images/logo.png")} alt="logo" />
+          </div>
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <a data-toggle="tab" role="tab" href="#main">
+                    Start your design
+                  </a>
+                </li>
+                <li>
+                  <a data-toggle="tab" role="tab" href="#products">
+                    All products
+                  </a>
+                </li>
+                <li>
+                  <a data-toggle="tab" role="tab" href="#design">
+                    Inspiration
+                  </a>
+                </li>
+                <li>
+                  <a data-toggle="tab" role="tab" href="#merchants">
+                    About
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div className="social">
+            <span>
+              <BsFacebook />
+            </span>
+            <span>
+              <AiFillTwitterCircle />
+            </span>
+            <span>
+              <RiInstagramFill />
+            </span>
+          </div>
+        </div>
+      ) : null}
+
+      <header>
+        <div>
+          <img src={require("../assets/images/logo.png")} alt="logo" />
+        </div>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <a data-toggle="tab" role="tab" href="#main">
+                  Start your design
+                </a>
+              </li>
+              <li>
+                <a data-toggle="tab" role="tab" href="#products">
+                  All products
+                </a>
+              </li>
+              <li>
+                <a data-toggle="tab" role="tab" href="#design">
+                  Inspiration
+                </a>
+              </li>
+              <li>
+                <a data-toggle="tab" role="tab" href="#merchants">
+                  About
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Account</a>
+              </li>
+              <li>
+                <a href="#">
+                  <GrCart />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div className="menu">
+            <button onClick={showMenu}>
+              <AiOutlineMenu />
+            </button>
+          </div>
+        </div>
+      </header>
+    </>
   );
 }
 

@@ -43,7 +43,7 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .container {
     padding: 0 1rem;
   }
@@ -79,10 +79,53 @@ header {
       }
     }
   }
+  .menu {
+    display: none;
+  }
   @media screen and (max-width: 768px) {
+    header {
+      margin: 0;
+      padding: 0;
+      margin-left: -20px;
+    }
     nav {
       display: none;
     }
+    .menu {
+      display: block;
+
+      button {
+        font-size: 1.5rem;
+        background-color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.menu_block {
+  position: absolute;
+  height: 40vh;
+  width: 100%;
+  background-color: #fff;
+  display: grid;
+  padding: 1rem;
+  img {
+    margin-bottom: 20px;
+  }
+  nav {
+    ul {
+      li {
+        margin-bottom: 20px;
+      }
+      li:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .social {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -142,16 +185,22 @@ header {
 // PRODUCTS
 .products {
   &__title {
-    display: flex;
-    flex-direction: row;
+    @include flexCenter;
+
     justify-content: space-between;
     padding: 3rem 0;
+
     h2 {
       @include h2;
       color: #011f3a;
     }
     button {
       @include button;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &__title {
+      flex-wrap: wrap;
     }
   }
   section {
@@ -185,6 +234,18 @@ header {
       }
     }
   }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 768px;
+    }
+    section {
+      grid-template-columns: 1fr;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
 
   &__bottom {
     @include flexCenter;
@@ -200,6 +261,14 @@ header {
       background: #ffffff;
       color: #3d5675;
     }
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 425px;
+  }
+  section {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -219,7 +288,7 @@ section {
       @include flexCenter;
       button {
         @include button;
-        margin: 4rem 0;
+        margin: 4rem 1rem;
       }
     }
 
@@ -302,6 +371,12 @@ section {
       }
     }
   }
+  @media screen and (max-width: 768px) {
+    .yellow-box {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
 }
 
 // Merchants
@@ -328,6 +403,7 @@ section {
         color: #011f3a;
         font-weight: 400;
         line-height: 31.92px;
+        margin-bottom: 20px;
       }
       div {
         display: flex;
@@ -345,7 +421,7 @@ section {
           div {
             display: flex;
             flex-direction: column;
-            margin-left: 20px;
+            margin-left: 10px;
           }
         }
       }
@@ -374,6 +450,44 @@ section {
         color: #3d5675;
       }
     }
+  }
+}
+@media screen and (max-width: 768px) {
+  .merchants {
+    grid-template-columns: 1fr;
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    .merchants_img {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0;
+    }
+    .merchants_info {
+      padding: 1rem 0.5rem;
+      div {
+        padding: 0;
+      }
+    }
+    &__bottom {
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  div:nth-child(1) {
+    div {
+      // padding: 1rem;
+    }
+  }
+
+  div:nth-child(6) {
+    order: 4;
+  }
+  div:nth-child(5) {
+    order: 6;
   }
 }
 
@@ -418,5 +532,18 @@ footer {
         }
       }
     }
+  }
+  @media screen and (max-width: 768px) {
+    .col {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  button,
+  input {
+    width: 100% !important;
   }
 }
