@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./Header.module.scss";
 
 // icons
 import { GrCart } from "react-icons/gr";
@@ -17,9 +18,9 @@ function Header() {
   return (
     <>
       {isMenu ? (
-        <div className="menu_block">
+        <div className={styles.menu_block}>
           <div>
-            <img src={require("../assets/images/logo.png")} alt="logo" />
+            <img src={require("../../assets/images/logo.png")} alt="logo" />
           </div>
           <div>
             <nav>
@@ -47,7 +48,7 @@ function Header() {
               </ul>
             </nav>
           </div>
-          <div className="social">
+          <div className={styles.social}>
             <span>
               <BsFacebook />
             </span>
@@ -63,7 +64,7 @@ function Header() {
 
       <header>
         <div>
-          <img src={require("../assets/images/logo.png")} alt="logo" />
+          <img src={require("../../assets/images/logo.png")} alt="logo" />
         </div>
         <div>
           <nav>
@@ -104,7 +105,7 @@ function Header() {
               </li>
             </ul>
           </nav>
-          <div className="menu">
+          <div className={styles.menu}>
             <button onClick={showMenu}>
               <AiOutlineMenu />
             </button>

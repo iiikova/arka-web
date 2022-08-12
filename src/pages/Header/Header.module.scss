@@ -1,0 +1,84 @@
+@import "../../global.scss";
+@import "../../index.scss";
+
+header {
+  height: 61px;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid rgba(149, 149, 149, 0.17);
+  nav {
+    ul {
+      display: flex;
+      li {
+        margin-right: 50px;
+        a {
+          @include p;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+      }
+
+      li:hover {
+        border-bottom: 1px solid #000;
+      }
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .menu {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    header {
+      margin: 0;
+      padding: 0;
+      margin-left: -20px;
+    }
+    nav {
+      display: none;
+    }
+    .menu {
+      display: block;
+
+      button {
+        font-size: 1.5rem;
+        background-color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.menu_block {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+
+  img {
+    margin-bottom: 80px;
+  }
+  nav {
+    margin-bottom: 80px;
+
+    ul {
+      li {
+        margin-bottom: 20px;
+      }
+      li:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .social {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+}

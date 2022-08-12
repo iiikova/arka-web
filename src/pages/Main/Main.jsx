@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./Main.module.scss";
 
 function Main() {
   return (
     <>
-      <section className="main" id="main">
-        <div className="container">
+      <section className={styles.main} id="main">
+        <div className={styles.container}>
           <div>
             <h1>Fast and easy custom boxes your customers will love</h1>
             <p>
@@ -16,17 +17,20 @@ function Main() {
           </div>
         </div>
       </section>
-      <div className="brands">
-        <div className="container">
+      <div className={styles.brands}>
+        <div className={styles.container}>
           <div>
-            <img src={require("../assets/images/shopify.png")} alt="Shopify" />
+            <img
+              src={require("../../assets/images/shopify.png")}
+              alt="Shopify"
+            />
             <p>
               Shopify <br /> Integrated
             </p>
           </div>
           <div>
             <img
-              src={require("../assets/images/Rectangle (1).png")}
+              src={require("../../assets/images/Rectangle (1).png")}
               alt="Amazon"
             />
             <p>
@@ -35,7 +39,7 @@ function Main() {
           </div>
           <div>
             <img
-              src={require("../assets/images/Rectangle (2).png")}
+              src={require("../../assets/images/Rectangle (2).png")}
               alt="Eco"
             />
             <p>

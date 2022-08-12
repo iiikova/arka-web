@@ -1,15 +1,16 @@
 import React from "react";
+import styles from "../Design/Design.module.scss";
 
 function Design() {
   return (
-    <div className="container" id="design">
+    <div className={styles.container} id="design">
       <section>
-        <div className="green-box">
+        <div className={styles.green_box}>
           <h2>Fast and easy custom boxes your customers will love</h2>
-          <div className="green-items">
+          <div className={styles.green_items}>
             <div>
               <img
-                src={require("../assets/images/frames/Rectangle.png")}
+                src={require("../../assets/images/frames/Rectangle.png")}
                 alt="frame"
               />
               <h3>You Order</h3>
@@ -21,7 +22,7 @@ function Design() {
             </div>
             <div>
               <img
-                src={require("../assets/images/frames/Rectangle (1).png")}
+                src={require("../../assets/images/frames/Rectangle (1).png")}
                 alt="frame"
               />
               <h3>We Proof</h3>
@@ -33,7 +34,7 @@ function Design() {
             </div>
             <div>
               <img
-                src={require("../assets/images/frames/Rectangle (2).png")}
+                src={require("../../assets/images/frames/Rectangle (2).png")}
                 alt="frame"
               />
               <h3>We Print & Ship</h3>
@@ -44,16 +45,19 @@ function Design() {
               </p>
             </div>
           </div>
-          <div className="btn">
+          <div className={styles.btn}>
             <button>Start your design</button>
           </div>
         </div>
 
-        <div className="trans-box">
+        <div className={styles.trans_box}>
           <h2>The Arka advantage</h2>
-          <div className="trans-items">
+          <div className={styles.trans_items}>
             <div>
-              <img src={require("../assets/images/frames/1.png")} alt="frame" />
+              <img
+                src={require("../../assets/images/frames/1.png")}
+                alt="frame"
+              />
               <h3>Eco-Friendly Material</h3>
               <p>
                 Order as little as 10, giving you the
@@ -64,7 +68,10 @@ function Design() {
               </p>
             </div>
             <div>
-              <img src={require("../assets/images/frames/2.png")} alt="frame" />
+              <img
+                src={require("../../assets/images/frames/2.png")}
+                alt="frame"
+              />
               <h3>Full Outside Print</h3>
               <p>
                 Design what you want - no extra
@@ -75,7 +82,10 @@ function Design() {
               </p>
             </div>
             <div>
-              <img src={require("../assets/images/frames/3.png")} alt="frame" />
+              <img
+                src={require("../../assets/images/frames/3.png")}
+                alt="frame"
+              />
               <h3>Proofing</h3>
               <p>
                 After you order, our internal designers
@@ -88,9 +98,12 @@ function Design() {
           </div>
         </div>
 
-        <div className="yellow-box">
+        <div className={styles.yellow_box}>
           <div>
-            <img src={require("../assets/images/frames/11.png")} alt="frame" />
+            <img
+              src={require("../../assets/images/frames/11.png")}
+              alt="frame"
+            />
             <h3>Couldn't find a size you need?</h3>
             <p>
               We’ll work directly with you to create a fully branded packaging
@@ -99,7 +112,10 @@ function Design() {
             <button>Request a quote</button>
           </div>
           <div>
-            <img src={require("../assets/images/frames/22.png")} alt="frame" />
+            <img
+              src={require("../../assets/images/frames/22.png")}
+              alt="frame"
+            />
             <h3>Couldn't find a size you need?</h3>
             <p>
               Let us know what size you need and we'll email an Adobe

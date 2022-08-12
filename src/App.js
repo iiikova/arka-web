@@ -1,20 +1,20 @@
-import Design from "./pages/Design";
-import Footer from "./pages/Footer";
-import Header from "./pages/Header";
-import Main from "./pages/Main";
-import Merchants from "./pages/Merchants";
-import Products from "./pages/Products";
+import Design from "./pages/Design/Design";
+import Footer from "./pages/Footer/Footer";
+import Header from "./pages/Header/Header";
+import Main from "./pages/Main/Main";
+import Products from "./pages/Products/Products";
+import Merchants from "./pages/Merchants/Merchants";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Main />
-      <Products />
-      <Design />
-      <Merchants />
+    <>
+      {/* <Header /> */}
+      {/* <Main /> */}
+      {/* <Products /> */}
+      {/* <Design /> */}
+      {/* <Merchants /> */}
       <Footer />
-    </div>
+    </>
   );
 }
 

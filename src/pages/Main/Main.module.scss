@@ -1,0 +1,54 @@
+@import "../../global.scss";
+@import "../../index.scss";
+
+.main {
+  @include flexCenter;
+  padding-top: 61px;
+  height: 689px;
+  width: 100%;
+  background-color: #f2ae4d;
+  background-image: url("../../assets/images/main_bg.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  h1 {
+    @include h1;
+    width: 450px;
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    h1 {
+      width: 100%;
+    }
+  }
+  p {
+    @include p;
+    margin-bottom: 30px;
+  }
+  button {
+    @include button;
+  }
+}
+
+// BRANDS
+.brands {
+  @include flexCenter;
+  height: 120px;
+  background: rgb(251, 251, 251);
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      @include p;
+      color: #a1a1a1;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .brands {
+    p {
+      display: none;
+    }
+  }
+}

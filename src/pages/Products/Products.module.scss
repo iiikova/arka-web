@@ -1,0 +1,89 @@
+@import "../../global.scss";
+@import "../../index.scss";
+
+.products {
+  &__title {
+    @include flexCenter;
+    justify-content: space-between;
+    padding: 3rem 0;
+    h2 {
+      @include h2;
+      color: #011f3a;
+    }
+    button {
+      @include button;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &__title {
+      flex-wrap: wrap;
+    }
+  }
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #fff;
+    .item {
+      border: 1px solid #ededed;
+      padding: 0.5rem 1rem;
+      .desc {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: #a1a1a1;
+
+        &__title {
+          width: 200px;
+
+          h3 {
+            @include h3;
+            letter-spacing: 0.36px;
+            color: #011f3a;
+          }
+          p {
+            @include p;
+          }
+        }
+        &__price {
+          width: 100px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 768px;
+    }
+    section {
+      grid-template-columns: 1fr;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bottom {
+    @include flexCenter;
+    column-gap: 2rem;
+    padding: 3rem 0;
+    p {
+      @include p;
+      font-weight: 400;
+      color: #a1a1a1;
+    }
+    button {
+      @include button;
+      background: #ffffff;
+      color: #3d5675;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 425px;
+  }
+  section {
+    grid-template-columns: 1fr;
+  }
+}
