@@ -10,7 +10,7 @@ function Footer() {
   return (
     <footer>
       <div className={styles.container}>
-        <div className={styles.col}>
+        <div className={styles.row}>
           <div>
             <img src={require("../../assets/images/logo.png")} />
           </div>

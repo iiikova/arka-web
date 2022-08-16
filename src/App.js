@@ -8,11 +8,11 @@ import Merchants from "./pages/Merchants/Merchants";
 function App() {
   return (
     <>
-      {/* <Header /> */}
-      {/* <Main /> */}
-      {/* <Products /> */}
-      {/* <Design /> */}
-      {/* <Merchants /> */}
+      <Header />
+      <Main />
+      <Products />
+      <Design />
+      <Merchants />
       <Footer />
     </>
   );

@@ -1,22 +1,23 @@
-// DESIGN
 @import "../../global.scss";
 @import "../../index.scss";
 
-section {
-  .green_box {
-    background: #72bda3;
-    box-shadow: 0px 14px 44px rgba(143, 143, 143, 0.25);
-    border-radius: 0px;
-    h2 {
-      @include h2;
-      padding: 3rem 0;
-      text-align: center;
-      color: #011f3a;
-    }
-    .green_items {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      justify-items: center;
+.green {
+  background: #72bda3;
+  box-shadow: 0px 14px 44px rgba(143, 143, 143, 0.25);
+  display: grid;
+  h2 {
+    @include h2;
+    padding: 3rem 0rem;
+    text-align: center;
+    color: #011f3a;
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    &__col {
+      @include flexCenter;
+      flex-direction: column;
       text-align: center;
       h3 {
         @include h3;
@@ -28,35 +29,28 @@ section {
         color: #3d5675;
       }
     }
-    .btn {
-      @include flexCenter;
-      button {
-        @include button;
-        margin: 4rem 1rem;
-      }
-    }
   }
-  .trans_box {
-    padding: 5rem 0rem;
-    h2 {
-      @include h2;
-      margin-left: 80px;
-      text-align: left;
-    }
-    @media screen and (max-width: 768px) {
-      h2 {
-        margin-left: 0;
-        text-align: center;
-      }
-    }
-    .trans_items {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      justify-items: center;
-      text-align: left;
-      img {
-        padding: 4rem 0;
-      }
+  button {
+    @include button;
+    justify-self: center;
+    margin: 4rem 1rem;
+  }
+}
+
+.grey {
+  padding: 5rem 0rem;
+  h2 {
+    @include h2;
+    text-align: left;
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    text-align: left;
+    &__col {
+      @include flexCenter;
+      flex-direction: column;
       h3 {
         @include h3;
         letter-spacing: 0.36px;
@@ -70,44 +64,91 @@ section {
       }
     }
   }
-  .yellow_box {
-    padding: 5rem 0rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    background: #ffca3a;
-    box-shadow: 0px 14px 44px rgba(143, 143, 143, 0.25);
-    border-radius: 0px;
-    div {
-      @include flexCenter;
-      flex-direction: column;
-      width: 333px;
-      img {
-        padding-bottom: 2rem;
-      }
-      h3 {
-        @include h3;
-        font-weight: 700;
-        color: #011f3a;
-        margin-bottom: 1rem;
-      }
-      p {
-        @include p;
-        text-align: center;
-        color: #3d5675;
-        margin-bottom: 1rem;
-      }
-      button {
-        @include button;
-        background: #ffffff;
-        color: #3d5675;
-      }
+}
+
+.yellow {
+  padding: 5rem 0rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  background: #ffca3a;
+  box-shadow: 0px 14px 44px rgba(143, 143, 143, 0.25);
+  .col {
+    @include flexCenter;
+    flex-direction: column;
+    width: 333px;
+    img {
+      padding-bottom: 2rem;
+    }
+    h3 {
+      @include h3;
+      font-weight: 700;
+      color: #011f3a;
+      margin-bottom: 1rem;
+    }
+    p {
+      @include p;
+      text-align: center;
+      color: #3d5675;
+      margin-bottom: 1rem;
+    }
+    button {
+      @include button;
+      background: #ffffff;
+      color: #3d5675;
     }
   }
-  @media screen and (max-width: 768px) {
-    .yellow_box {
+}
+
+// MEDIA Breakpoints
+@media screen and (max-width: $xs) {
+  .container {
+    width: $xs;
+  }
+  .green {
+    &__row {
       grid-template-columns: 1fr;
-      gap: 2rem;
     }
+  }
+  .grey {
+    padding: 5rem 1rem;
+    h2 {
+      text-align: center;
+    }
+    .grey__row {
+      grid-template-columns: 1fr;
+    }
+  }
+  .yellow {
+    grid-template-columns: 1fr;
+    .col {
+      margin-bottom: 2rem;
+    }
+  }
+}
+@media screen and (min-width: $md) {
+  .container {
+    width: $md;
+  }
+  .green {
+    h2 {
+      padding: 3rem 4rem;
+    }
+    .green__row {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .grey {
+    padding: 5rem 1rem;
+  }
+}
+@media screen and (min-width: $lg) {
+  .container {
+    width: $lg;
+  }
+}
+@media screen and (min-width: $xl) {
+  .container {
+    width: $xl;
   }
 }

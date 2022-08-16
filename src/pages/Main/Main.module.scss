@@ -12,13 +12,8 @@
   background-repeat: no-repeat;
   h1 {
     @include h1;
-    width: 450px;
+    width: 50%;
     margin-bottom: 30px;
-  }
-  @media screen and (max-width: 768px) {
-    h1 {
-      width: 100%;
-    }
   }
   p {
     @include p;
@@ -26,6 +21,7 @@
   }
   button {
     @include button;
+    justify-self: start;
   }
 }
 
@@ -45,10 +41,45 @@
     }
   }
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (min-width: $xs) {
+  .container {
+    width: $xs;
+    padding: 0 1rem;
+    h1 {
+      width: 100%;
+    }
+  }
+
   .brands {
     p {
       display: none;
     }
+  }
+}
+@media screen and (min-width: $md) {
+  .container {
+    width: $md;
+    padding: 0 1rem;
+    h1 {
+      width: 50%;
+    }
+  }
+  .brands {
+    p {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: $lg) {
+  .container {
+    width: $lg;
+    padding: 0 1rem;
+  }
+}
+@media screen and (min-width: $xl) {
+  .container {
+    width: $xl;
+    padding: 0 1rem;
   }
 }
