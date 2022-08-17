@@ -1,0 +1,80 @@
+@import "../../../global.scss";
+@import "../../../index.scss";
+
+.login {
+  height: 100vh;
+  padding-top: 61px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-content: center;
+
+  aside {
+    background-image: url("../../../assets/images/main_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 14px 44px rgba(143, 143, 143, 0.25);
+  }
+  form {
+    box-shadow: 0px 14px 44px rgba(143, 143, 143, 0.25);
+
+    display: grid;
+    align-items: center;
+    height: 60vh;
+    background-color: #fff;
+    div {
+      display: flex;
+      p {
+        margin-left: 20px;
+      }
+    }
+
+    button {
+      @include button;
+    }
+    span {
+      color: red;
+    }
+  }
+}
+
+@media screen and (min-width: $xs) {
+  .container {
+    width: $xs;
+    padding: 0 1rem;
+  }
+  .login {
+    padding: 0;
+    grid-template-columns: 1fr;
+    form {
+      padding: 1rem;
+    }
+  }
+}
+@media screen and (min-width: $md) {
+  .container {
+    width: $md;
+    padding: 0 1rem;
+  }
+  .login {
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+    form {
+      padding: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: $lg) {
+  .container {
+    width: $lg;
+    padding: 0 1rem;
+  }
+}
+@media screen and (min-width: $xl) {
+  .container {
+    width: $xl;
+    padding: 0 1rem;
+  }
+}

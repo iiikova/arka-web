@@ -8,6 +8,8 @@ import { BsFacebook } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { RiInstagramFill } from "react-icons/ri";
 
+import { Navigate, NavLink } from "react-router-dom";
+
 function Header() {
   const [isMenu, setIsMenu] = useState(false);
 
@@ -70,24 +72,36 @@ function Header() {
           <nav>
             <ul>
               <li>
-                <a data-toggle="tab" role="tab" href="#main">
-                  Start your design
-                </a>
+                <li>
+                  <NavLink to="/" data-toggle="tab" role="tab">
+                    Start your design
+                  </NavLink>
+                </li>
               </li>
               <li>
-                <a data-toggle="tab" role="tab" href="#products">
+                <NavLink
+                  to="#products"
+                  data-toggle="tab"
+                  role="tab"
+                  href="#products"
+                >
                   All products
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a data-toggle="tab" role="tab" href="#design">
+                <NavLink
+                  to="#design"
+                  data-toggle="tab"
+                  role="tab"
+                  href="#design"
+                >
                   Inspiration
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a data-toggle="tab" role="tab" href="#merchants">
-                  About
-                </a>
+                <NavLink to="#merchants" data-toggle="tab" role="tab">
+                  <a href="#merchants">About</a>
+                </NavLink>
               </li>
             </ul>
           </nav>
@@ -96,12 +110,13 @@ function Header() {
           <nav>
             <ul>
               <li>
-                <a href="#">Account</a>
+                <NavLink to="login">Account</NavLink>
               </li>
+
               <li>
-                <a href="#">
+                <NavLink to="login">
                   <GrCart />
-                </a>
+                </NavLink>
               </li>
             </ul>
           </nav>
