@@ -1,11 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import Header from "../../Header/Header";
+import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.scss";
-import { Input, TextField, Button, Card } from "@mui/material";
+import { TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
 
 function Login() {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -13,22 +14,12 @@ function Login() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
+
   return (
     <div className={styles.container}>
       <div className={styles.login}>
         <aside></aside>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <TextField
-            label="FIRST NAME"
-            {...register("firstName", { required: true })}
-          />
-          {errors.firstName && <span>This field is required</span>}
-          <TextField
-            label="LAST NAME"
-            {...register("lastName", { required: true })}
-          />
-          {errors.lastName && <span>This field is required</span>}
-
           <TextField
             label="YOUR EMAIL"
             {...register("email", { required: true })}
@@ -41,23 +32,12 @@ function Login() {
           />
           {errors.password && <span>This field is required</span>}
 
-          <TextField
-            label="CONFIRM PASSWORD"
-            {...register("rePassword", { required: true })}
-          />
-          {errors.rePassword && <span>This field is required</span>}
+          <button type="submit">login</button>
 
-          <div>
-            <input
-              type="checkbox"
-              name=""
-              id=""
-              placeholder="I agree to the Terms of User"
-            />
-            <p> I agree to the Terms of User</p>
-          </div>
-
-          <button type="submit">register</button>
+          <h3>
+            Create your Account?
+            <span onClick={() => navigate("/register")}>Sign Up</span>
+          </h3>
         </form>
       </div>
     </div>

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import styles from "./Header.module.scss";
 
 // icons
@@ -8,13 +10,20 @@ import { BsFacebook } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { RiInstagramFill } from "react-icons/ri";
 
-import { Navigate, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   const [isMenu, setIsMenu] = useState(false);
 
+  const navigate = useNavigate();
+
   const showMenu = () => {
     setIsMenu((previous) => !previous);
+  };
+
+  const login = () => {
+    navigate("login");
+    setIsMenu(false);
   };
 
   return (
@@ -47,6 +56,11 @@ function Header() {
                     About
                   </a>
                 </li>
+                <li>
+                  <button onClick={login} type="submit">
+                    login
+                  </button>
+                </li>
               </ul>
             </nav>
           </div>
@@ -65,7 +79,7 @@ function Header() {
       ) : null}
 
       <header>
-        <div>
+        <div onClick={() => navigate("/")}>
           <img src={require("../../assets/images/logo.png")} alt="logo" />
         </div>
         <div>

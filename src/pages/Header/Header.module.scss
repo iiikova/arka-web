@@ -10,6 +10,7 @@ header {
   background-color: #fff;
   position: fixed;
   width: 100%;
+  z-index: 33;
   border-bottom: 1px solid rgba(149, 149, 149, 0.17);
   nav {
     ul {
@@ -45,7 +46,6 @@ header {
     }
     .menu {
       display: block;
-
       button {
         font-size: 1.5rem;
         background-color: #fff;
@@ -55,6 +55,7 @@ header {
   }
 }
 .menu_block {
+  z-index: 33;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -70,6 +71,9 @@ header {
     ul {
       li {
         margin-bottom: 20px;
+        button {
+          @include button;
+        }
       }
       li:hover {
         text-decoration: underline;
